@@ -1,0 +1,26 @@
+[gd_scene load_steps=5 format=3 uid="uid://50dbavklbh58"]
+
+[ext_resource type="Script" uid="uid://ddu7g6wdtr404" path="res://scripts/toy.gd" id="1_2u4uf"]
+[ext_resource type="Texture2D" uid="uid://g4nooptv04w" path="res://sprites/Items_1_16x16.png" id="1_bwicb"]
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_bwicb"]
+bounce = 1.0
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_jyhfs"]
+
+[node name="Toy" type="RigidBody2D"]
+collision_layer = 4
+collision_mask = 7
+physics_material_override = SubResource("PhysicsMaterial_bwicb")
+script = ExtResource("1_2u4uf")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_jyhfs")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+z_index = 5
+texture = ExtResource("1_bwicb")
+region_enabled = true
+region_rect = Rect2(30.917004, 351.91156, 18.241394, 17.08844)
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

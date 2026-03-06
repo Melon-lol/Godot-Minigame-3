@@ -1,0 +1,26 @@
+[gd_scene load_steps=5 format=3 uid="uid://bosn7n7nuhptq"]
+
+[ext_resource type="PackedScene" uid="uid://bbtm7jm8vaiua" path="res://scenes/player.tscn" id="1_o5qli"]
+[ext_resource type="PackedScene" uid="uid://dnwu51ewmpojr" path="res://scenes/tilemaps.tscn" id="2_sugp2"]
+[ext_resource type="PackedScene" uid="uid://50dbavklbh58" path="res://scenes/toy.tscn" id="3_sugp2"]
+[ext_resource type="PackedScene" uid="uid://dnsxa3gy7x6qo" path="res://scenes/ui.tscn" id="4_jyhfs"]
+
+[node name="Main" type="Node2D"]
+
+[node name="Player" parent="." instance=ExtResource("1_o5qli")]
+position = Vector2(-60, 64)
+
+[node name="Camera2D" type="Camera2D" parent="."]
+
+[node name="Tilemaps" parent="." instance=ExtResource("2_sugp2")]
+unique_name_in_owner = true
+
+[node name="Toy" parent="." instance=ExtResource("3_sugp2")]
+position = Vector2(11, -37)
+
+[node name="UI" parent="." instance=ExtResource("4_jyhfs")]
+unique_name_in_owner = true
+offset_left = -141.0
+offset_top = -116.0
+offset_right = 42.0
+offset_bottom = -93.0

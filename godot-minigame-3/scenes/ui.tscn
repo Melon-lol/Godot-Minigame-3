@@ -1,0 +1,27 @@
+[gd_scene load_steps=5 format=3 uid="uid://dnsxa3gy7x6qo"]
+
+[ext_resource type="FontFile" uid="uid://cbaevepk7bsuj" path="res://fonts/rainyhearts.ttf" id="1_nt7q6"]
+[ext_resource type="Script" uid="uid://cwdvt7xfe036r" path="res://scripts/ui.gd" id="1_x4jx1"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_xlq6p"]
+font = ExtResource("1_nt7q6")
+
+[sub_resource type="LabelSettings" id="LabelSettings_nt7q6"]
+font = ExtResource("1_nt7q6")
+
+[node name="UI" type="HBoxContainer"]
+offset_left = -143.0
+offset_top = -90.0
+offset_right = 124.0
+offset_bottom = -51.0
+script = ExtResource("1_x4jx1")
+
+[node name="BouncesLabel" type="Label" parent="."]
+layout_mode = 2
+text = "Bounces: 0"
+label_settings = SubResource("LabelSettings_xlq6p")
+
+[node name="ColorLabel" type="Label" parent="."]
+layout_mode = 2
+text = "Color: ?"
+label_settings = SubResource("LabelSettings_nt7q6")
